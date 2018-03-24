@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Evènement Paris</title>
+	<link rel="shortcut icon" type="image/x-icon" href="schedule.png" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Notre CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround-master/dist/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<!-- links to CND mapbox -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet'/>
+
+</head>
+
+<body class="index">
+
+</br>
+ <div class="container" id="container1">
+ 	<hr/>
+	<img id ="EnTete" src="paris.jpg">
+	 <!-- Barre de menu-->
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<!-- Version mobile -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Version PC -->
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">		    
+		    <ul class="navbar-nav mr-auto ">	    	
+		    	<li class="nav-item active">
+		    		<a class="nav-link" href="#" >Carte des Evenements  |<span class="sr-only">(current)</span></a>
+		    	</li>
+
+		    	<li class="nav-item">
+		        	<a class="nav-link Liste" href="Liste.html">Liste des Evenements</a>
+		    	</li>
+		      
+		    </ul>
+		</div>
+	</nav>
+	<hr/>
+</div>
+	<br/>
+
+
+
+<!-- contenu -->
+	<!-- Map -->
+<div class="container" id="Contenu"><hr/>
+	<div class="row" id="Map">
+		<div class="col-md-1"></div>
+		<div class="col-md-6">			
+			<div id='map'></div>
+
+			<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoibW1ja2VlbiIsImEiOiJjamVhMXR4NDEwczgwMnFxaGplazZiYmtyIn0.J1dZ-wlW2VD2BJwe8QGcJQ';
+			var map = new mapboxgl.Map({
+			    container: 'map',
+			    style: 'mapbox://styles/mapbox/light-v9',
+			    center: [2.333333, 48.866667],
+			    zoom: 10
+			});
+			</script>
+			<script type="text/javascript" src="js/event_script.js"></script>
+
+		</div>		
+		<!-- Texte à droite -->
+		<div class="col-md-4 Texte" >
+			<div class="textBienvenue">Une année riche vous attend dans la capitale française ! Expositions phares, événements sportifs majeurs, festivals incontournables, grands rendez-vous gastronomiques, animations inédites pour les familles… les temps forts s’enchainent à Paris en 2018. A chaque saison, la ville vous fait vibrer : tentez l’expérience !</div>
+			<img id="avion" src="paper-plane.png"></img>
+		</div>
+		<div class="col-md-1"></div>
+		
+	</div>
+	<hr/>
+	</div>
+
+
+<!-- Bas de page -->
+	</br>
+	<div class="container"><hr/>
+		<div class="Bas_de_page">
+			<img id="oiseaux" src="oiseaux.jpg"></img>
+		</div>
+		<span id="Copyright">©Marie-Odile McKeeney Emeline Jaouen</span>
+	</br>
+	</div>
+
+	
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="./vendor/js/bootstrap.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround-master/dist/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>
